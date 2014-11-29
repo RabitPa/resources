@@ -1,0 +1,6 @@
+alias vi=mvim
+alias ls='ls -Ft'
+alias ll='ls -alFht'
+alias down='cd ~/Downloads'
+alias doc='cd ~/Documents'
+alias mp='cd ~/MyProjects'
