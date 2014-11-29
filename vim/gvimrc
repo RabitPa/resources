@@ -254,4 +254,6 @@ map ca :Calendar<cr>
 " ColorScheme Setting
 "===========================
 let psc_style='warm' 
+set background=dark
+:colorscheme  solarized"color schema
 ":colorscheme  desert "color schema
