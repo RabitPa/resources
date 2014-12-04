@@ -4,7 +4,7 @@ import string
 import random
 
 def generate_random_string():
-    chars = string.letters + string.digits
+    chars = string.letters + string.digits + string.punctuation 
     return "".join(random.sample(chars, 8))
 
 if __name__ == '__main__':
