@@ -1,0 +1,270 @@
+"==========================
+" Bundle Settings
+"==========================
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/vundle
+call vundle#rc()
+
+"let Vundle manage Vundle
+Bundle 'gmarik/vundle'
+
+"Bundles:
+"github:
+Bundle 'tpope/vim-fugitive'
+Bundle 'git://github.com/Lokaltog/vim-easymotion'
+Bundle 'git://github.com/rstacruz/sparkup'
+Bundle 'tpope/vim-rails.git'
+Bundle 'git://github.com/Lokaltog/vim-powerline.git'
+Bundle 'scrooloose/nerdtree'
+
+"vim-scripts repos
+Bundle 'a.vim'
+Bundle 'c.vim'
+Bundle 'bufexplorer.zip'
+Bundle 'The-NERD-tree'
+Bundle 'minibufexpl.vim'
+Bundle 'winmanager--Fox'
+Bundle 'L9'
+Bundle 'FuzzyFinder'
+"Bundle 'taglist.vim'
+
+filetype plugin indent on
+
+"==========================
+" diary Settings
+"==========================
+if has("win32")
+let $VIM_DIARY='E:\ZhaoYD_Rational_IBM\Diary'
+else
+let $VIM_DIARY='$HOME/.vim/Diaries'
+endif
+
+"==========================
+" Vim UI Setting
+"==========================
+set number " line number
+set textwidth=80 " text width
+set linespace=-1 " space it out a little more (easier to read) 
+set ruler " always show current position along the bottom 
+set wildmenu " type :h and press <Tab> to look what happens 
+set cmdheight=2 " use 2 screen lines for command-line 
+set lazyredraw " do not redraw while executing macros (much faster) 
+set backspace=2 " make backspace work normal
+set tabstop=4 " 
+set expandtab
+set history=400
+
+set hlsearch
+set noincsearch
+set expandtab
+set noerrorbells
+set novisualbell
+set t_vb= "close visual bell
+set tabstop=4
+set shiftwidth=4
+set nobackup
+set nowritebackup
+set smarttab
+set smartindent
+set autoindent " Auto align
+set cindent
+set wrap
+set autoread
+set showtabline=2 
+set clipboard+=unnamed " share clipboard with windows
+set tabpagemax=20
+set laststatus=2
+set helplang=en
+syntax enable
+syntax on
+"set noswapfile
+"set nonumber " don't print line number
+""set hid " allow to change buffer without saving
+""set backspace=2 " make backspace work normal
+""set whichwrap+=<,>,h,l " allow backspace and cursor keys to wrap
+""set mouse=a " use mouse in all modes
+""set shortmess=atI " shorten messages to avoid 'press a key' prompt
+""set report=0 " tell us when anything is changed via :...
+""set fillchars=vert:\ ,stl:\ ,stlnc:\ 
+"
+""==========================
+"" Visual cues Setting
+""==========================
+"set showmatch " show matching paren 
+"set linebreak
+"set statusline=\ [File]\ %F%m%r%h\ %w\ \ [PWD]\ %r%{CurrectDir()}%h\ \ %=[Line]\ %l,%c\ %=\ %P
+
+"==========================
+" Folding
+"==========================
+set foldmethod=marker
+set foldenable " turn on folding
+set foldmethod=indent " make folding indent sensitive
+set foldlevel=100 " don't autofold anything (but I can still fold manually)
+set foldopen -=search " don't open folds when you search into them
+set foldopen -=undo " don't open folds when you undo stuff 
+
+"
+""==========================
+"" Utilities
+""==========================
+"function! CurrectDir()
+"    let curdir = substitute(getcwd(), "", "", "g")
+"    return curdir
+"endfunction
+"
+"if has("multi_byte")
+"    set encoding=utf-8
+"    set termencoding=utf-8
+"    set formatoptions+=mM
+"    set fencs=utf-8
+"
+"    if v:lang =~? '^\(zh\)\|\(ja\)\|\(ko\)'
+"        set ambiwidth=double
+"    endif
+"
+"    if has("win32")
+"        source $VIMRUNTIME/delmenu.vim
+"        source $VIMRUNTIME/menu.vim
+"        "language messages zh_CN.utf-8
+"        language messages en_US.utf-8
+"    endif 
+"else
+"    echoerr "Sorry, this version of (g)vim was not compiled with +multi_byte"
+"endif
+"
+"if has("gui_running")
+"    set guioptions=
+"    colorscheme desert
+"    set cursorline
+"    if has("win32")
+"        set gfn=Consolas
+"        au GUIEnter * simalt ~x
+"		set guifont=Consolas:h12:w6
+"		"set guifont=Lucida_Console:h10:CANSI
+"    else
+"        set guifont=Raize\ 13
+""        set guifontwide=WenQuanYi\ Bitmap\ Song\ 12
+"    endif
+"else
+"    colorscheme desert
+"endif
+"
+"if has("autocmd")
+"    filetype plugin indent on
+"    augroup vimrcEx
+"        au!
+"        autocmd FileType text setlocal textwidth=78
+"        autocmd BufReadPost *
+"                    \ if line("'\"") > 0 && line("'\"") <= line("$") |
+"                    \   exe "normal g`\"" |
+"                    \ endif
+"    augroup END
+"endif
+"
+"==========================
+" key stock
+"==========================
+map tn :tabnext<cr>
+map tp :tabprevious<cr>
+map td :tabnew .<cr>
+map te :tabedit
+map tc :tabclose<cr>
+map cs :!php -l %<cr>
+
+map <C-s> :w<cr>
+map <C-z> :u<cr>
+
+"==========================
+" a.vim Setting
+"==========================
+"alternate files quickly (.c --> .h etc) 
+	
+"==========================
+" bufexplorer Settings
+"==========================
+let g:bufExplorerDefaultHelp=0 " Do not show default help.
+let g:bufExplorerDetailedHelp=0 " Do not show detailed help.
+let g:bufExplorerShowRelativePath=0 " Show absolute paths.
+let g:bufExplorerShowDirectories=1 " Show directories.
+let g:bufExplorerSortBy='mru' " Sort by most recently used.
+let g:bufExplorerSplitRight=0 " Split left.
+let g:bufExplorerSplitVertical=1 " Split vertically.
+let g:bufExplorerSplitVertSize = 30 " Split width
+let g:bufExplorerUseCurrentWindow=1 " Open in new window.
+
+""===========================
+"" winManager setting
+""===========================
+""let g:winManagerWindowLayout = 'BufExplorer,FileExplorer|TagList'
+"let g:winManagerWindowLayout = 'FileExplorer,TagsExplorer|BufExplorer|TagList' " What windows should it
+"let g:winManagerWidth = 30
+"let g:defaultExplorer = 0
+"nmap <C-W><C-F> :FirstExplorerWindow<CR>
+"nmap <C-W><C-B> :BottomExplorerWindow<CR>
+""nmap <silent> <leader>wm :WMToggle<CR>
+"nnoremap wt :WMToggle<CR>
+"
+"
+"=========================
+map <F3> :edit .<CR>
+
+""==========================
+""auto complete the words
+""==========================
+"inoremap <F2> <C-x><C-o>
+"
+""===========================
+"" Mouse setting
+""===========================
+"set mouse=a
+"set selectmode+=mouse
+":behave mswin
+"source $VIMRUNTIME/mswin.vim
+
+"===========================
+" Scroll setting
+"===========================
+set guioptions=mlrb
+
+"===========================
+" Calendar setting
+"===========================
+let g:calendar_diary=$VIM_DIARY
+map ca :Calendar<cr>
+
+"===========================
+" ColorScheme Setting
+"===========================
+let psc_style='warm' 
+set background=dark
+:colorscheme  solarized "color schema
+":colorscheme  desert "color schema
+
+"===========================
+" vim-powerline Setting
+"===========================
+set laststatus=2
+set t_Co=256
+let g:Powerline_symbols='fancy'
+set encoding=utf8
+set fillchars+=stl:\ ,stlnc:\
+
+"===========================
+" taglist Setting
+"===========================
+"let Tlist_Show_Menu=1
+"let Tlist_Show_One_File=1
+"let Tlist_Exit_OnlyWindow=1
+
+"===========================
+" NerdTree Setting
+"===========================
+let NERDTreeWinPos='right'
+let NERDTreeWinSize=31
+let NERDTreeChDirMode=1
+map nt :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
