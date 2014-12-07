@@ -15,4 +15,4 @@ function _update_ps1() {
 }
 
 export PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
-$PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/~}"; echo -ne "\007"'
+#PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/~}"; echo -ne "\007"'

@@ -17,6 +17,7 @@ Bundle 'git://github.com/Lokaltog/vim-easymotion'
 Bundle 'git://github.com/rstacruz/sparkup'
 Bundle 'tpope/vim-rails.git'
 Bundle 'git://github.com/Lokaltog/vim-powerline.git'
+"Bundle 'git://github.com/Lokaltog/powerline'
 Bundle 'scrooloose/nerdtree'
 
 "vim-scripts repos
@@ -246,11 +247,13 @@ set background=dark
 "===========================
 " vim-powerline Setting
 "===========================
+source /Library/Python/2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
 set laststatus=2
 set t_Co=256
 let g:Powerline_symbols='fancy'
 set encoding=utf8
 set fillchars+=stl:\ ,stlnc:\
+set guifont=DejaVu\ Sans\ Mono\ for\ Powerline
 
 "===========================
 " taglist Setting
@@ -265,6 +268,6 @@ set fillchars+=stl:\ ,stlnc:\
 let NERDTreeWinPos='right'
 let NERDTreeWinSize=31
 let NERDTreeChDirMode=1
-map nt :NERDTreeToggle<CR>
+map t :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
