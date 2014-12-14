@@ -8,22 +8,35 @@ set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
 "let Vundle manage Vundle
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
 "Bundles:
 "github:
-Bundle 'tpope/vim-fugitive'
-Bundle 'git://github.com/Lokaltog/vim-easymotion'
-Bundle 'git://github.com/rstacruz/sparkup'
-Bundle 'tpope/vim-rails.git'
-Bundle 'git://github.com/Lokaltog/vim-powerline.git'
-"Bundle 'git://github.com/Lokaltog/powerline'
-Bundle 'scrooloose/nerdtree'
-Bundle 'pathogen.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'git://github.com/Lokaltog/vim-easymotion'
+Plugin 'git://github.com/rstacruz/sparkup'
+Plugin 'tpope/vim-rails.git'
+Plugin 'scrooloose/nerdtree'
+Plugin 'pathogen.vim'
 Plugin 'scrooloose/syntastic'
-Bundle 'tpope/vim-surround'
+Plugin 'tpope/vim-surround'
 Plugin 'bling/vim-airline'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'puppetlabs/puppet-syntax-vim'
+Plugin 'majutsushi/tagbar'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'edsono/ultisnips'
+Plugin 'elzr/vim-json'
+Plugin 'honza/vim-snippets'
+Plugin 'justinmk/vim-sneak'
+Plugin 'kien/ctrlp.vim'
+Plugin 'ludovicchabant/vim-lawrencium'
+Plugin 'mhinz/vim-signify'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'sjl/gundo.vim'
+Plugin 'tyru/open-browser.vim'
+"Bundle 'git://github.com/Lokaltog/powerline'
+"Bundle 'git://github.com/Lokaltog/vim-powerline.git'
 
 "vim-scripts repos
 Bundle 'a.vim'
@@ -32,11 +45,12 @@ Bundle 'bufexplorer.zip'
 Bundle 'The-NERD-tree'
 Bundle 'minibufexpl.vim'
 Bundle 'winmanager--Fox'
-Bundle 'L9'
 Bundle 'FuzzyFinder'
 "Bundle 'taglist.vim'
+"Bundle 'L9'
 
 filetype plugin indent on
+let g:vundle_default_git_proto='git'
 
 "==========================
 " diary Settings
@@ -272,6 +286,7 @@ set guifont=DejaVu\ Sans\ Mono\ for\ Powerline
 let NERDTreeWinPos='right'
 let NERDTreeWinSize=31
 let NERDTreeChDirMode=1
+let NERDTreeDirArrows=1
 map t :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
