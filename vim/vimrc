@@ -23,6 +23,7 @@ Bundle 'pathogen.vim'
 Plugin 'scrooloose/syntastic'
 Bundle 'tpope/vim-surround'
 Plugin 'bling/vim-airline'
+Plugin 'scrooloose/nerdcommenter'
 
 "vim-scripts repos
 Bundle 'a.vim'
