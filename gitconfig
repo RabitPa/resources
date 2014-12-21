@@ -1,0 +1,27 @@
+[user]
+	name = Yide
+	email = yide@ainemo.com
+[push]
+	default = simple
+[core]
+	editor = vi
+[merge]
+	tool = vimdiff
+[color]
+	status = auto
+	branch = auto
+	interactive = auto
+	diff = auto
+	ui = true
+[alias]
+	st = status
+    pu = pull --rebase
+    ps = push
+    br = branch
+	d = difftool
+	c = checkout
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
