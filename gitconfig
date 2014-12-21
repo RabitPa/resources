@@ -13,6 +13,11 @@
 	interactive = auto
 	diff = auto
 	ui = true
+[color "status"]
+    added = green
+    changed = blue
+    untracked = magenta
+    deleted = red
 [alias]
 	st = status
     pu = pull --rebase
