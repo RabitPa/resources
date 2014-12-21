@@ -277,13 +277,6 @@ set fillchars+=stl:\ ,stlnc:\
 set guifont=DejaVu\ Sans\ Mono\ for\ Powerline
 
 "===========================
-" taglist Setting
-"===========================
-"let Tlist_Show_Menu=1
-"let Tlist_Show_One_File=1
-"let Tlist_Exit_OnlyWindow=1
-
-"===========================
 " NerdTree Setting
 "===========================
 let NERDTreeWinPos='right'
@@ -316,3 +309,9 @@ set listchars=tab:▸\ ,eol:¬
 " Invisible character colors 
 highlight NonText guifg=#4a4a59
 highlight SpecialKey guifg=#4a4a59
+
+"===========================
+" shortcuts
+"===========================
+" set colorscheme to default
+nmap <leader>d :colorscheme default<CR>
