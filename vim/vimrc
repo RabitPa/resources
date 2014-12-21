@@ -36,6 +36,7 @@ Plugin 'mhinz/vim-signify'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'sjl/gundo.vim'
 Plugin 'tyru/open-browser.vim'
+Plugin 'nelstrom/vim-markdown-folding'
 "Bundle 'git://github.com/Lokaltog/powerline'
 "Bundle 'git://github.com/Lokaltog/vim-powerline.git'
 
@@ -304,3 +305,14 @@ let g:syntastic_c_checkers = ["gcc*"]
 let g:syntastic_sh_checkers = ["sh"]
 let g:syntastic_ruby_checkers = ["ruby*"]
 call pathogen#infect()
+
+"===========================
+" show invisibles
+"===========================
+" Shortcut to rapidly toggle `set list`
+nmap <leader>l :set list!<CR>
+" Use the same symbols as TextMate for tabstops and EOLs
+set listchars=tab:▸\ ,eol:¬
+" Invisible character colors 
+highlight NonText guifg=#4a4a59
+highlight SpecialKey guifg=#4a4a59
