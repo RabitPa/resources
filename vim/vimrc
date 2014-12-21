@@ -315,3 +315,4 @@ highlight SpecialKey guifg=#4a4a59
 "===========================
 " set colorscheme to default
 nmap <leader>d :colorscheme default<CR>
+nmap <leader>c :only<CR>
