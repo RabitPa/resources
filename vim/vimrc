@@ -6,6 +6,7 @@ filetype off
 
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
+let g:vundle_default_git_proto = 'git'
 
 "let Vundle manage Vundle
 Plugin 'gmarik/vundle'
@@ -46,6 +47,7 @@ Bundle 'The-NERD-tree'
 Bundle 'minibufexpl.vim'
 Bundle 'winmanager--Fox'
 Bundle 'FuzzyFinder'
+Bundle 'AutoClose'
 "Bundle 'taglist.vim'
 "Bundle 'L9'
 
