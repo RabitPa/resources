@@ -37,6 +37,7 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'sjl/gundo.vim'
 Plugin 'tyru/open-browser.vim'
 Plugin 'nelstrom/vim-markdown-folding'
+Plugin 'godlygeek/tabular'
 "Bundle 'git://github.com/Lokaltog/powerline'
 "Bundle 'git://github.com/Lokaltog/vim-powerline.git'
 
@@ -289,14 +290,14 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 "===========================
 " Syntastic Setting
 "===========================
-let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open    = 1
 let g:syntastic_aggregate_errors = 1
-let g:syntastic_puppet_checkers = ["puppet"]
-let g:syntastic_python_checkers = ["python"]
-let g:syntastic_perl_checkers = ["perl"]
-let g:syntastic_c_checkers = ["gcc*"]
-let g:syntastic_sh_checkers = ["sh"]
-let g:syntastic_ruby_checkers = ["ruby*"]
+let g:syntastic_puppet_checkers  = ["puppet"]
+let g:syntastic_python_checkers  = ["python"]
+let g:syntastic_perl_checkers    = ["perl"]
+let g:syntastic_c_checkers       = ["gcc*"]
+let g:syntastic_sh_checkers      = ["sh"]
+let g:syntastic_ruby_checkers    = ["ruby*"]
 call pathogen#infect()
 
 "===========================
@@ -313,6 +314,21 @@ highlight SpecialKey guifg=#4a4a59
 "===========================
 " shortcuts
 "===========================
+let mapleader=','
 " set colorscheme to default
 nmap <leader>d :colorscheme default<CR>
+" close all other buffers
 nmap <leader>c :only<CR>
+" spell check
+nmap <leader>s :set spell!<CR>
+set spell
+" Tabularize shortcuts
+if exists(":Tabularize")
+  nmap <Leader>a= :Tabularize /=<CR>
+  vmap <Leader>a= :Tabularize /=<CR>
+  nmap <Leader>a- :Tabularize /-><CR>
+  vmap <Leader>a- :Tabularize /-><CR>
+  nmap <Leader>a: :Tabularize /:\zs<CR>
+  vmap <Leader>a: :Tabularize /:\zs<CR>
+endif
+
