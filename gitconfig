@@ -24,10 +24,10 @@
 	ui          = true
 [color "diff"]
 	plain      = normal
-	meta       = bold
-	frag       = cyan
-	old        = red
-	new        = green
+	meta       = yellow bold
+	frag       = magenta bold
+	old        = red bold
+	new        = green bold
 	commit     = yellow
 	whitespace = normal red
 [color "branch"]
@@ -44,7 +44,8 @@
 	untracked = yellow
 	nobranch  = red
 [color "grep"]
-	match = yellow
+	match = magenta bold
+	plain = cyan
 [color "interactive"]
 	prompt = normal
 	header = normal
@@ -58,4 +59,4 @@
     br = branch
 	d  = difftool
 	c  = checkout
-	lg = log --color --graph --pretty = format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
