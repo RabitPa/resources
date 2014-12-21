@@ -7,17 +7,41 @@
 	editor = vi
 [merge]
 	tool = vimdiff
+
 [color]
 	status = auto
 	branch = auto
 	interactive = auto
 	diff = auto
 	ui = true
+[color "diff"]
+	plain = normal
+	meta = bold
+	frag = cyan
+	old = red
+	new = green
+	commit = yellow
+	whitespace = normal red
+[color "branch"]
+	current = green
+	local = normal
+	remote = red
+	plain = normal
 [color "status"]
-    added = green
-    changed = blue
-    untracked = magenta
-    deleted = red
+	header = normal
+	added = red
+	updated = green
+	changed = red
+	untracked = red
+	nobranch = red
+[color "grep"]
+	match = normal
+[color "interactive"]
+	prompt = normal
+	header = normal
+	help = normal
+	error = normal
+
 [alias]
 	st = status
     pu = pull --rebase
