@@ -1,56 +1,61 @@
 [user]
-	name = Yide
+	name  = Yide
 	email = yide@ainemo.com
 [push]
-	default = simple
+    # 'git push' should only do the current branch, not all
+	default = current
+[branch]
+    # always setup 'git pull' to rebase instead of merge
+    autosetuprebase = always
 [core]
-	editor = vi
+	editor = vim
 [merge]
 	tool = vimdiff
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
 
 [color]
-	status = auto
-	branch = auto
+	status      = auto
+	branch      = auto
 	interactive = auto
-	diff = auto
-	ui = true
+	diff        = auto
+	ui          = true
 [color "diff"]
-	plain = normal
-	meta = bold
-	frag = cyan
-	old = red
-	new = green
-	commit = yellow
+	plain      = normal
+	meta       = bold
+	frag       = cyan
+	old        = red
+	new        = green
+	commit     = yellow
 	whitespace = normal red
 [color "branch"]
+	header    = cyan
 	current = green
-	local = normal
-	remote = red
-	plain = normal
+	local   = normal
+	remote  = red
+	plain   = normal
 [color "status"]
-	header = normal
-	added = red
-	updated = green
-	changed = red
-	untracked = red
-	nobranch = red
+	header    = cyan
+	added     = red
+	updated   = green
+	changed   = red
+	untracked = yellow
+	nobranch  = red
 [color "grep"]
-	match = normal
+	match = yellow
 [color "interactive"]
 	prompt = normal
 	header = normal
-	help = normal
-	error = normal
+	help   = normal
+	error  = normal
 
 [alias]
 	st = status
     pu = pull --rebase
     ps = push
     br = branch
-	d = difftool
-	c = checkout
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
-[diff]
-	tool = vimdiff
-[difftool]
-	prompt = false
+	d  = difftool
+	c  = checkout
+	lg = log --color --graph --pretty = format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
