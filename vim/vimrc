@@ -38,6 +38,7 @@ Plugin 'sjl/gundo.vim'
 Plugin 'tyru/open-browser.vim'
 Plugin 'nelstrom/vim-markdown-folding'
 Plugin 'godlygeek/tabular'
+Plugin 'chase/vim-ansible-yaml'
 "Bundle 'git://github.com/Lokaltog/powerline'
 "Bundle 'git://github.com/Lokaltog/vim-powerline.git'
 
@@ -79,6 +80,8 @@ set backspace=2 " make backspace work normal
 set tabstop=4 " 
 set expandtab
 set history=400
+set cursorline
+set cursorcolumn
 
 set hlsearch
 set noincsearch
@@ -101,8 +104,6 @@ set clipboard+=unnamed " share clipboard with windows
 set tabpagemax=20
 set laststatus=2
 set helplang=en
-syntax enable
-syntax on
 "set noswapfile
 "set nonumber " don't print line number
 ""set hid " allow to change buffer without saving
@@ -123,12 +124,12 @@ syntax on
 "==========================
 " Folding
 "==========================
-set foldmethod=marker
 set foldenable " turn on folding
-set foldmethod=indent " make folding indent sensitive
+set foldmethod=syntax
+"set foldmethod = indent " make folding indent sensitive
 set foldlevel=100 " don't autofold anything (but I can still fold manually)
-set foldopen -=search " don't open folds when you search into them
-set foldopen -=undo " don't open folds when you undo stuff 
+set foldopen-=search " don't open folds when you search into them
+set foldopen-=undo " don't open folds when you undo stuff
 
 "
 ""==========================
@@ -264,6 +265,14 @@ map ca :Calendar<cr>
 let psc_style='warm' 
 set background=dark
 :colorscheme  solarized "color schema
+let g:solarized_termcolors= 256
+let g:solarized_termtrans = 1
+let g:solarized_degrade   = 1
+let g:solarized_bold      = 1
+let g:solarized_underline = 1
+let g:solarized_italic    = 1
+let g:solarized_contrast  = "high" "low
+let g:solarized_visibility= "high" "or "low"
 ":colorscheme  desert "color schema
 
 "===========================
@@ -332,3 +341,8 @@ if exists(":Tabularize")
   vmap <Leader>a: :Tabularize /:\zs<CR>
 endif
 
+"===========================
+" enable syntax
+"===========================
+syntax enable
+syntax on
